@@ -21,12 +21,12 @@ import random
 #m=int(input('m='))
 #print(round(m/n))
 #4
-sum=0
-n=1 
-for i in 1, 3, 4, 7, 101, 2, 4, 5, 122, 14:
-    #print(i)
-    sum +=i 
-print(sum,end='.')
+#sum=0
+#n=1 
+#for i in 1, 3, 4, 7, 101, 2, 4, 5, 122, 14:
+#    print(i)
+#    sum +=i 
+#print(sum,end='.')
 #5
 a=input('Ввидите слово=')
 first=a[0:len(a)//2]
