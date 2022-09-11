@@ -28,9 +28,24 @@ import random
 #    sum +=i 
 #print(sum,end='.')
 #5
-a=input('Ввидите слово=')
-first=a[0:len(a)//2]
-c=a[len(a)//2:-1]
-l=a[-1]
-second=c+l
-print(second+first)
+#a=input('Ввидите слово=')
+#first=a[0:len(a)//2]
+#c=a[len(a)//2:-1]
+#l=a[-1]
+#second=c+l
+#print(second+first)
+#6
+i = -1
+k = -1
+e = 1
+max = 1 
+while i != 0:
+    i = int(input())
+    if i == k:
+        e += 1
+    else:
+        if e > max:
+            max = e
+            e = 0
+    k = i
+print(max)
