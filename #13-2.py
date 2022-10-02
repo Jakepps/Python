@@ -3,13 +3,13 @@ from unicodedata import name
 
 
 class Animal():
-    name = "Плотва"
+    name = ""
 
     def eat(self):
         print("Намнём")
         print(self.name,"покушал")
 
-    def nickname(self, newName):
+    def __init__(self, newName):
         self.name = newName
         print("Родилось животное ", self.name)
 
@@ -23,7 +23,7 @@ class Animal():
         print(self.name, "говорит игого")
 
 
-horse = Animal()
+horse = Animal("Плотва")
 print("Имя лошади -> ", horse.get_name())
 print("Геральт никогда не меняет имя лошедям. Но вы можете!")
 horse.set_name(input())
