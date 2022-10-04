@@ -8,7 +8,6 @@ class Animal():
     def getName(self):
         print(self.name)
 
-
 class Dog(Animal):
     def makeNoise(self):
         print(self.name, "говорит Гав")
@@ -26,7 +25,7 @@ class Student(Animal):
     def makeNoise(self):
         print(self.name, "говорит еще посплю пару минут")
     def eat(self):
-        print(self.name, "скушала доширак")
+        print(self.name, "скушал пельмени")
 
 
 dogname = Dog("Шарик")
