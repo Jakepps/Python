@@ -63,7 +63,7 @@ def savehtml():
 
 
 window = tkinter.Tk()
-window.title("Перевод Фаренгейт в градусы")
+window.title("Вычисление объема сферы.")
 
 window.config(bg="white")
 
