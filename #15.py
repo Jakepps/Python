@@ -176,12 +176,13 @@ def sql_rating(con):
     cursorObj.execute(
         "CREATE TABLE rating("
         "HotelIDinRat integer PRIMARY KEY,"
-        "Rat integer"
-        "TextRat text,)")
+        "Rat integer,"
+        "TextRat text)"
+    )
 
     cursorObj.execute(
         "INSERT INTO rating "
-        "VALUES(1, 5,'норм')"
+        "VALUES(1,5,'норм')"
     ) 
     cursorObj.execute(
         "INSERT INTO  rating "
@@ -193,7 +194,7 @@ def sql_rating(con):
     ) 
     cursorObj.execute(
         "INSERT INTO  rating "
-        "VALUES(4, 1,'база')"
+        "VALUES(4,1,'база')"
     ) 
     cursorObj.execute(
         "INSERT INTO  rating "
@@ -225,9 +226,9 @@ def sql_guest(con):
     cursorObj.execute(
         "CREATE TABLE guest("
         "GuestID integer PRIMARY KEY,"
-        "Numb integer"
-        "NumRoom integer"
-        "Gender text,)")
+        "Numb integer,"
+        "NumRoom integer,"
+        "Gender text)")
     cursorObj.execute(
         "INSERT INTO guest "
         "VALUES(1, 12323213223,1,'муж')"
@@ -358,13 +359,14 @@ def select(con):
         cursorObj.execute(f'SELECT * from {listItem}')
         [print(row) for row in cursorObj.fetchall()]
 
-con=sql_connection
+con=sql_connection()
 
 sql_hotel(con)
 sql_employee(con)
+sql_rooms(con)
 sql_rating(con)
 sql_guest(con)
-sql_rooms(con)
+
 
 select(con)
 print("ВЫВОД АПДЕЙТА")
