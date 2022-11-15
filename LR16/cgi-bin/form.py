@@ -16,11 +16,11 @@ def id_find(con, req_id):
 form = cgi.FieldStorage()
 if form.getvalue('table_list') is not None:  # запись в файл
     tbl_name = form.getvalue('table_list')
-    file = open("C:/Users/Артём/source/repos/Jakepps/Python/LR16/cgi-bin/table.txt", "w")
+    file = open("cgi-bin/table.txt", "w")
     file.write(form.getvalue('table_list'))
     file.close()
 else:
-    inp = open("C:/Users/Артём/source/repos/Jakepps/Python/LR16/cgi-bin/table.txt", "r")
+    inp = open("cgi-bin/table.txt", "r")
     tbl_name = inp.read()
     inp.close()
 
@@ -142,9 +142,9 @@ if act is not None:
         file.write('None')
         file.close()
 
-    if act == 'Удалить запись':
+    if act == 'Delete an entry':
         print("""
-                        Введите id записи, которую хотите удалить: <input type="text" name="delete_id">
+                        Enter the id of the record you want to delete: <input type="text" name="delete_id">
                         <p><input type="submit" value="Sent"></p>
                             <style>
                             input[name="delete_id"]
